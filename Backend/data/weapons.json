@@ -1,0 +1,308 @@
+[
+  {
+    "name": "A Thousand Floating Dreams",
+    "type": "Catalyst",
+    "rarity": 5,
+    "baseAttack": 44
+  },
+  {
+    "name": "Akuoumaru",
+    "type": "Claymore",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Alley Hunter",
+    "type": "Bow",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Amber Catalyst",
+    "type": "Catalyst",
+    "rarity": 3,
+    "baseAttack": 40
+  },
+  {
+    "name": "Amenoma Kageuchi",
+    "type": "Sword",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Amos' Bow",
+    "type": "Bow",
+    "rarity": 5,
+    "baseAttack": 46
+  },
+  {
+    "name": "Apprentice's Notes",
+    "type": "Catalyst",
+    "rarity": 1,
+    "baseAttack": 23
+  },
+  {
+    "name": "Aqua Simulacra",
+    "type": "Bow",
+    "rarity": 5,
+    "baseAttack": 44
+  },
+  {
+    "name": "Aquila Favonia",
+    "type": "Sword",
+    "rarity": 5,
+    "baseAttack": 48
+  },
+  {
+    "name": "Ballad of the Boundless Blue",
+    "type": "Catalyst",
+    "rarity": 4,
+    "baseAttack": 44
+  },
+  {
+    "name": "Ballad Of The Fjords",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Beacon of the Reed Sea",
+    "type": "Claymore",
+    "rarity": 5,
+    "baseAttack": 46
+  },
+  {
+    "name": "Beginner's Protector",
+    "type": "Polearm",
+    "rarity": 1,
+    "baseAttack": 23
+  },
+  {
+    "name": "Black Tassel",
+    "type": "Polearm",
+    "rarity": 3,
+    "baseAttack": 38
+  },
+  {
+    "name": "Blackcliff Agate",
+    "type": "Catalyst",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Blackcliff Agate",
+    "type": "Catalyst",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Blackcliff Longsword",
+    "type": "Sword",
+    "rarity": 4,
+    "baseAttack": 44
+  },
+  {
+    "name": "Blackcliff Pole",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Blackcliff Slasher",
+    "type": "Claymore",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Blackcliff Warbow",
+    "type": "Bow",
+    "rarity": 4,
+    "baseAttack": 44
+  },
+  {
+    "name": "Bloodtainted Greatsword",
+    "type": "Claymore",
+    "rarity": 3,
+    "baseAttack": 38
+  },
+  {
+    "name": "Calamity Queller",
+    "type": "Polearm",
+    "rarity": 5,
+    "baseAttack": 49
+  },
+  {
+    "name": "Cashflow Supervision",
+    "type": "Catalyst",
+    "rarity": 5,
+    "baseAttack": 48
+  },
+  {
+    "name": "Cinnabar Spindle",
+    "type": "Sword",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Compound Bow",
+    "type": "Bow",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Cool Steel",
+    "type": "Sword",
+    "rarity": 3,
+    "baseAttack": 39
+  },
+  {
+    "name": "Crane's Echoing Call",
+    "type": "Catalyst",
+    "rarity": 5,
+    "baseAttack": 49
+  },
+  {
+    "name": "Crescent Pike",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 44
+  },
+  {
+    "name": "Crimson Moon's Semblance",
+    "type": "Polearm",
+    "rarity": 5,
+    "baseAttack": 48
+  },
+  {
+    "name": "Dark Iron Sword",
+    "type": "Sword",
+    "rarity": 3,
+    "baseAttack": 40
+  },
+  {
+    "name": "Deathmatch",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Debate Club",
+    "type": "Claymore",
+    "rarity": 3,
+    "baseAttack": 39
+  },
+  {
+    "name": "Dialogues of the Desert Sages",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Dodoco Tales",
+    "type": "Catalyst",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Dragon's Bane",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Dragonspine Spear",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Dull Blade",
+    "type": "Sword",
+    "rarity": 1,
+    "baseAttack": 23
+  },
+  {
+    "name": "Ebony Bow",
+    "type": "Bow",
+    "rarity": 3,
+    "baseAttack": 40
+  },
+  {
+    "name": "Elegy for the End",
+    "type": "Bow",
+    "rarity": 5,
+    "baseAttack": 46
+  },
+  {
+    "name": "Emerald Orb",
+    "type": "Catalyst",
+    "rarity": 3,
+    "baseAttack": 40
+  },
+  {
+    "name": "End of the Line",
+    "type": "Bow",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Engulfing Lightning",
+    "type": "Polearm",
+    "rarity": 5,
+    "baseAttack": 46
+  },
+  {
+    "name": "Everlasting Moonglow",
+    "type": "Catalyst",
+    "rarity": 5,
+    "baseAttack": 46
+  },
+  {
+    "name": "Eye of Perception",
+    "type": "Catalyst",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Fading Twilight",
+    "type": "Bow",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Favonius Codex",
+    "type": "Catalyst",
+    "rarity": 4,
+    "baseAttack": 42
+  },
+  {
+    "name": "Favonius Greatsword",
+    "type": "Claymore",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Favonius Lance",
+    "type": "Polearm",
+    "rarity": 4,
+    "baseAttack": 44
+  },
+  {
+    "name": "Favonius Sword",
+    "type": "Sword",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Favonius Warbow",
+    "type": "Bow",
+    "rarity": 4,
+    "baseAttack": 41
+  },
+  {
+    "name": "Ferrous Shadow",
+    "type": "Claymore",
+    "rarity": 3,
+    "baseAttack": 39
+  }
+]
