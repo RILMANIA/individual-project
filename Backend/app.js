@@ -1,3 +1,9 @@
+if (process.env.NODE_ENV !== "production") {
+  // hanya dipake ketika proses development
+  // kalo production kita tidak menggunakan library dotenv -> env bawaan dari pm2 (runner)
+  require("dotenv").config();
+}
+
 const express = require("express");
 const UserController = require("./controllers/userController");
 const MainController = require("./controllers/mainController");
