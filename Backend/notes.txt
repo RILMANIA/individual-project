@@ -1,0 +1,59 @@
+docs bcrypts: https://npmjs.com/package/bcryptjs
+
+1. Init project
+
+npm init -y
+npm express sequelize pg bcryptjs jsonwebtoken
+npm -D jest supertest sequelize-cli
+
+2. Init sequelize, ubah config, bikin database
+
+sequelize init
+sequelize db:create
+sequelize db:create --env test
+
+3. bikin migration
+
+sequelize model:create --name --attributes
+
+!!! yang ada foreign key dibikin terakhir !!!
+
+4. bikin seeder
+
+!!! bikin seeding untuk model yang tidak ada foreign key dulu !!!
+
+5. bikin app hello world
+
+!!! jangan lupa body-parser !!!
+
+di package.json:
+
+"dev": nodemon app
+
+"test": jest --verbose ...
+
+
+Type errors:
+
+SequelizeValidationError
+SequelizeUniqueConstraintError
+
+ambil 1 error saja:
+
+message: error.errors[0].message
+
+Untuk test:
+
+sequelize-cli db:create --env test
+
+Untuk bikin token: jwt
+
+Untuk Authentication bikin fungsi:
+
+authentication (req, res, next) {}
+dengan req.headers.authorisation
+
+untuk dapat datanya:
+verifyToken(bearerToken.split(" "))[1]
+
+untuk errornya: JsonWebTokenError
