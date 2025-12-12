@@ -1,18 +1,27 @@
 import { Link, useNavigate } from "react-router";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("access_token");
+    setIsLoggedIn(!!token);
+  }, []);
 
   function handleLogout() {
     localStorage.removeItem("access_token");
-    navigate("pub/characters");
+    setIsLoggedIn(false);
+    navigate("/");
   }
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        <Link className="navbar-brand" to="/">
+          RILMANIA
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -31,20 +40,52 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="types/">
-                Types
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="register/">
-                Add-User
-              </Link>
-            </li>
+            {isLoggedIn && (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/characters">
+                    Characters
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/weapons">
+                    Weapons
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/artifacts">
+                    Artifacts
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/favoritecharacters">
+                    Favorites
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/myteams">
+                    My Teams
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
-          <button onClick={handleLogout} className="btn btn-danger">
-            Logout
-          </button>
+          <div className="d-flex gap-2">
+            {isLoggedIn ? (
+              <button onClick={handleLogout} className="btn btn-danger">
+                Logout
+              </button>
+            ) : (
+              <>
+                <Link to="/login" className="btn btn-primary">
+                  Login
+                </Link>
+                <Link to="/register" className="btn btn-success">
+                  Register
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </nav>
