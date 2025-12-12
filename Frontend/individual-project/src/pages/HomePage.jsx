@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import PubCharacterCard from "../components/PubCharacterCard";
+import CharacterCard from "../components/CharacterCard";
 
 export default function HomePage() {
   const [characters, setCharacters] = useState([]);
@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <div className="container mt-3 d-flex gap-3 flex-wrap">
       {characters.map((character, i) => (
-        <PubCharacterCard key={i + 1} character={character} />
+        <CharacterCard key={i + 1} character={character} />
       ))}
     </div>
   );

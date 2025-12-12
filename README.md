@@ -1,1 +1,1 @@
-# individual-project
+# Individual Project Phase 2

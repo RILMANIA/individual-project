@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import CharacterCard from "../components/CharacterCard";
-import { phase2Api } from "../helpers/http-client";
+
+const API_URL = "http://localhost:3000";
 
 export default function CharactersPage() {
   const [characters, setCharacters] = useState([]);
@@ -19,7 +21,7 @@ export default function CharactersPage() {
         return;
       }
 
-      const response = await phase2Api.get(`/characters`, {
+      const response = await axios.get(`https://genshin.jmp.blue/characters`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

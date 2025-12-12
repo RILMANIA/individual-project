@@ -1,27 +1,18 @@
 import { Link, useNavigate } from "react-router";
-import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem("access_token");
-    setIsLoggedIn(!!token);
-  }, []);
 
   function handleLogout() {
     localStorage.removeItem("access_token");
-    setIsLoggedIn(false);
-    navigate("/");
+    navigate("pub/characters");
   }
-
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
-        <Link className="navbar-brand" to="/">
-          MyGenshinlist
-        </Link>
+        <a className="navbar-brand" href="#">
+          Navbar
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -40,52 +31,20 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            {isLoggedIn && (
-              <>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/characters">
-                    Characters
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/weapons">
-                    Weapons
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/artifacts">
-                    Artifacts
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/favoritecharacters">
-                    Favorites
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/myteams">
-                    My Teams
-                  </Link>
-                </li>
-              </>
-            )}
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="types/">
+                Types
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="register/">
+                Add-User
+              </Link>
+            </li>
           </ul>
-          <div className="d-flex gap-2">
-            {isLoggedIn ? (
-              <button onClick={handleLogout} className="btn btn-danger">
-                Logout
-              </button>
-            ) : (
-              <>
-                <Link to="/login" className="btn btn-primary">
-                  Login
-                </Link>
-                <Link to="/register" className="btn btn-success">
-                  Register
-                </Link>
-              </>
-            )}
-          </div>
+          <button onClick={handleLogout} className="btn btn-danger">
+            Logout
+          </button>
         </div>
       </div>
     </nav>

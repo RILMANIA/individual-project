@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import MyTeamCard from "../components/MyTeamCard";
-import { phase2Api } from "../helpers/http-client";
+
+const API_URL = "http://localhost:3000";
 
 export default function MyTeamsPage() {
   const [teams, setTeams] = useState([]);
@@ -24,7 +26,7 @@ export default function MyTeamsPage() {
         return;
       }
 
-      const response = await phase2Api.get(`/myteams`, {
+      const response = await axios.get(`${API_URL}/myteams`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -52,8 +54,8 @@ export default function MyTeamsPage() {
 
     try {
       const token = localStorage.getItem("access_token");
-      await phase2Api.post(
-        `/myteams`,
+      await axios.post(
+        `${API_URL}/myteams`,
         { name: teamName },
         {
           headers: {
@@ -76,7 +78,7 @@ export default function MyTeamsPage() {
 
     try {
       const token = localStorage.getItem("access_token");
-      await phase2Api.delete(`/myteams/${id}`, {
+      await axios.delete(`${API_URL}/myteams/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

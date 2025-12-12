@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import { phase2Api } from "../helpers/http-client";
+import axios from "axios";
+
+const API_URL = "http://localhost:3000";
 
 export default function CharacterDetailPage() {
   const { id } = useParams();
@@ -20,7 +22,7 @@ export default function CharacterDetailPage() {
           return;
         }
 
-        const response = await phase2Api.get(`/characters/${id}`, {
+        const response = await axios.get(`${API_URL}/characters/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -45,8 +47,8 @@ export default function CharacterDetailPage() {
   const handleAddFavorite = async () => {
     try {
       const token = localStorage.getItem("access_token");
-      await phase2Api.post(
-        `/characters/${id}/addfavorite`,
+      await axios.post(
+        `${API_URL}/characters/${id}/addfavorite`,
         {},
         {
           headers: {

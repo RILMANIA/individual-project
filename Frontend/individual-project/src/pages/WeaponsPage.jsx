@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import WeaponCard from "../components/WeaponCard";
-import { phase2Api } from "../helpers/http-client";
+
+const API_URL = "http://localhost:3000";
 
 export default function WeaponsPage() {
   const [weapons, setWeapons] = useState([]);
@@ -20,7 +22,7 @@ export default function WeaponsPage() {
           return;
         }
 
-        const response = await phase2Api.get(`/weapons`, {
+        const response = await axios.get(`${API_URL}/weapons`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

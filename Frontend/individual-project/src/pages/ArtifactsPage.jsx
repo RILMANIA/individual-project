@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import ArtifactCard from "../components/ArtifactCard";
-import { phase2Api } from "../helpers/http-client";
+
+const API_URL = "http://localhost:3000";
 
 export default function ArtifactsPage() {
   const [artifacts, setArtifacts] = useState([]);
@@ -20,7 +22,7 @@ export default function ArtifactsPage() {
           return;
         }
 
-        const response = await phase2Api.get(`/artifacts`, {
+        const response = await axios.get(`${API_URL}/artifacts`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
