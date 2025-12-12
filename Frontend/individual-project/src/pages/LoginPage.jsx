@@ -13,27 +13,15 @@ export default function LoginPage() {
     try {
       // POST /login -d {email, password}
 
-      const response = await phase2Api.post("/apis/auth/login", {
+      const response = await phase2Api.post("/login", {
         email,
         password,
       });
 
-      //   {
-      //     "success": true,
-      //     "message": "Login successful",
-      //     "data": {
-      //         "user": {
-      //             "id": 1,
-      //             "username": "andi_prasetyo",
-      //         },
-      //         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYW5kaS5wcmFzZXR5b0BnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3NjQ3NDYxMzEsImV4cCI6MTc2NDc3NDkzMSwiYXVkIjoicGhhc2UyLWdjLWNsaWVudCIsImlzcyI6InBoYXNlMi1nYy1hcGkifQ.XcXKg6KfC21KkCsuymIGnCg_LBcIVXld6Fn_6x2DZ-A"
-      //     }
-      // }
-      const token = response.data.data.token;
-      localStorage.setItem("access_token", token);
+      const access_token = response.data.access_token;
+      localStorage.setItem("access_token", access_token);
 
       navigate("/");
-      // <Link to="/"></Link>;
     } catch (err) {
       console.log("🚀 ~ handleLogin ~ err:", err.response.data.message);
       window.Swal.fire({

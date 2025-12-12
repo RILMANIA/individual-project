@@ -15,31 +15,31 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    let usersData = JSON.parse(await fs.readFile("./data/users.json", "utf8"));
-    usersData.forEach((user) => {
-      delete user.id;
-      user.createdAt = new Date();
-      user.updatedAt = new Date();
-    });
-    await queryInterface.bulkInsert("Users", usersData, {});
-    let artifactsData = JSON.parse(
-      await fs.readFile("./data/artifacts.json", "utf8")
-    );
-    artifactsData.forEach((artifact) => {
-      delete artifact.id;
-      artifact.createdAt = new Date();
-      artifact.updatedAt = new Date();
-    });
-    await queryInterface.bulkInsert("Artifacts", artifactsData, {});
-    let weaponsData = JSON.parse(
-      await fs.readFile("./data/weapons.json", "utf8")
-    );
-    weaponsData.forEach((weapon) => {
-      delete weapon.id;
-      weapon.createdAt = new Date();
-      weapon.updatedAt = new Date();
-    });
-    await queryInterface.bulkInsert("Weapons", weaponsData, {});
+    // let usersData = JSON.parse(await fs.readFile("./data/users.json", "utf8"));
+    // usersData.forEach((user) => {
+    //   delete user.id;
+    //   user.createdAt = new Date();
+    //   user.updatedAt = new Date();
+    // });
+    // await queryInterface.bulkInsert("Users", usersData, {});
+    // let artifactsData = JSON.parse(
+    //   await fs.readFile("./data/artifacts.json", "utf8")
+    // );
+    // artifactsData.forEach((artifact) => {
+    //   delete artifact.id;
+    //   artifact.createdAt = new Date();
+    //   artifact.updatedAt = new Date();
+    // });
+    // await queryInterface.bulkInsert("Artifacts", artifactsData, {});
+    // let weaponsData = JSON.parse(
+    //   await fs.readFile("./data/weapons.json", "utf8")
+    // );
+    // weaponsData.forEach((weapon) => {
+    //   delete weapon.id;
+    //   weapon.createdAt = new Date();
+    //   weapon.updatedAt = new Date();
+    // });
+    // await queryInterface.bulkInsert("Weapons", weaponsData, {});
     let charactersData = JSON.parse(
       await fs.readFile("./data/characters.json", "utf8")
     );
