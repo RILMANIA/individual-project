@@ -1,5 +1,5 @@
-import { phase2Api } from "../helpers/http-client";
 import { useNavigate } from "react-router";
+import { phase2Api } from "../helpers/http-client";
 
 export default function CharacterCard({ character }) {
   const navigate = useNavigate();

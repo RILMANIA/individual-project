@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { phase2Api } from "../helpers/http-client";
 import ArtifactCard from "../components/ArtifactCard";
+import { phase2Api } from "../helpers/http-client";
 
 export default function ArtifactsPage() {
   const [artifacts, setArtifacts] = useState([]);
@@ -20,7 +20,7 @@ export default function ArtifactsPage() {
           return;
         }
 
-        const response = await phase2Api.get("/artifacts", {
+        const response = await phase2Api.get(`/artifacts`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

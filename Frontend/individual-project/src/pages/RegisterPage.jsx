@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { phase2Api } from "../helpers/http-client";
+import axios from "axios";
 import { useNavigate, Navigate } from "react-router";
 
 export default function RegisterPage() {
@@ -43,7 +43,7 @@ export default function RegisterPage() {
 
     try {
       setLoading(true);
-      const response = await phase2Api.post("/register", {
+      const response = await axios.post(`${API_URL}/register`, {
         username,
         email,
         password,

@@ -26,7 +26,7 @@ export default function TeamDetailPage() {
       }
 
       // Fetch team
-      const teamResponse = await phase2Api.get("/myteams", {
+      const teamResponse = await phase2Api.get(`/myteams`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -35,7 +35,7 @@ export default function TeamDetailPage() {
       setTeam(foundTeam);
 
       // Fetch characters
-      const charResponse = await phase2Api.get("/characters", {
+      const charResponse = await phase2Api.get(`/characters`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -63,7 +63,7 @@ export default function TeamDetailPage() {
     try {
       const token = localStorage.getItem("access_token");
       await phase2Api.post(
-        "/characterlists/add",
+        `/characterlists/add`,
         {
           myTeamId: parseInt(id),
           characterId: parseInt(selectedCharacterId),

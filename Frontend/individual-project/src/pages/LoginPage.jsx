@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { phase2Api } from "../helpers/http-client";
 import { Navigate, useNavigate } from "react-router";
+import axios from "axios";
 
 export default function LoginPage() {
   let navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("andi.prasetyo@gmail.com");
+  const [password, setPassword] = useState("123456");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -15,10 +15,13 @@ export default function LoginPage() {
 
     try {
       setLoading(true);
-      const response = await phase2Api.post("/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `https://p2.sonangga.com/apis/auth/login`,
+        {
+          email,
+          password,
+        }
+      );
 
       // Response format: { "access_token": "jwt_token_here" }
       const token = response.data.access_token;
@@ -45,7 +48,7 @@ export default function LoginPage() {
   return (
     <section id="login-page">
       <div className="container-sm py-5">
-        <h3 className="text-center">Welcome To RILMANIA</h3>
+        <h3 className="text-center">Welcome To MyGenshinList</h3>
         <form onSubmit={handleLogin} className="w-50 mx-auto py-5">
           {error && <div className="alert alert-danger">{error}</div>}
 

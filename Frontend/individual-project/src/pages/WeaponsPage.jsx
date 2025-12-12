@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { phase2Api } from "../helpers/http-client";
 import WeaponCard from "../components/WeaponCard";
+import { phase2Api } from "../helpers/http-client";
 
 export default function WeaponsPage() {
   const [weapons, setWeapons] = useState([]);
@@ -20,7 +20,7 @@ export default function WeaponsPage() {
           return;
         }
 
-        const response = await phase2Api.get("/weapons", {
+        const response = await phase2Api.get(`/weapons`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

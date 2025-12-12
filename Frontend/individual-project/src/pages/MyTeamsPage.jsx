@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { phase2Api } from "../helpers/http-client";
 import MyTeamCard from "../components/MyTeamCard";
+import { phase2Api } from "../helpers/http-client";
 
 export default function MyTeamsPage() {
   const [teams, setTeams] = useState([]);
@@ -24,7 +24,7 @@ export default function MyTeamsPage() {
         return;
       }
 
-      const response = await phase2Api.get("/myteams", {
+      const response = await phase2Api.get(`/myteams`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +53,7 @@ export default function MyTeamsPage() {
     try {
       const token = localStorage.getItem("access_token");
       await phase2Api.post(
-        "/myteams",
+        `/myteams`,
         { name: teamName },
         {
           headers: {

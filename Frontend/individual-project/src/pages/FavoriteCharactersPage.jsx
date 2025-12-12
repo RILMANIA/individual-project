@@ -19,7 +19,7 @@ export default function FavoriteCharactersPage() {
           return;
         }
 
-        const response = await phase2Api.get("/favoritecharacters", {
+        const response = await phase2Api.get(`/favoritecharacters`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

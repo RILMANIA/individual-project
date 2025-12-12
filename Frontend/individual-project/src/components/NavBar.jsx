@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          RILMANIA
+          MyGenshinlist
         </Link>
         <button
           className="navbar-toggler"
